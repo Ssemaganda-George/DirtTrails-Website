@@ -1,0 +1,146 @@
+/* Font Awesome setup remains the same */
+@font-face {
+	font-family: 'fontawesome';
+	src:url('../fonts/fontawesome.eot?-e43dk9');
+	src:url('../fonts/fontawesome.eot?#iefix-e43dk9') format('embedded-opentype'),
+		url('../fonts/fontawesome.woff?-e43dk9') format('woff'),
+		url('../fonts/fontawesome.ttf?-e43dk9') format('truetype'),
+		url('../fonts/fontawesome.svg?-e43dk9#fontawesome') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Elegant and safari-like typography with earthy colors */
+body {
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    color: #4a4a4a; /* Neutral dark gray for readability */
+    background-color: #f9f3e5; /* Light safari sand background */
+}
+
+/* Section titles with a safari look */
+section.service h2.text-center,
+section.team h3.text-center,
+section.work h3.text-center,
+section.test h3.text-center {
+	position:relative;
+    color: #7c4c1e; /* Earthy brown color for safari elegance */
+    font-family: 'Playfair Display', serif; /* Elegant heading font */
+    text-transform: uppercase; /* Classy uppercase styling */
+    font-weight: bold;
+    font-size: 2em;
+}
+
+/* Divider lines below section titles - earthy color */
+section.service h2.text-center:before,
+section.team h3.text-center:before,
+section.work h3.text-center:before,
+section.test h3.text-center:before {
+	content:'';
+	background-color:#b5651d; /* Safari brown */
+	height:3px;
+	width: 22%;
+    left: 39%;
+	bottom:15px;
+	display:block;
+	position:absolute;
+}
+
+/* Icons after section titles with safari colors */
+section.service h2.text-center:after,
+section.team h3.text-center:after,
+section.work h3.text-center:after,
+section.test h3.text-center:after {
+    font-family: 'fontawesome';
+    speak: none;
+    position: absolute;
+    background-color: #fff;
+    color: #b5651d; /* Safari brown icon color */
+    width: 40px;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    z-index: 99;
+	bottom:10%;
+	left:48%;
+}
+
+section.service h2.text-center:after {
+	content: '\f1b3'; /* Using a safari-themed icon, like a binoculars */
+}
+
+section.team h3.text-center:after { 
+	content: '\f083'; /* Group or team icon */
+}
+
+section.work h3.text-center:after { 
+	content: '\f013'; /* Gear icon for work section */
+}
+
+section.test h3.text-center:after { 
+	content: '\f0e6'; /* A book or knowledge icon for testimonials */
+}
+
+/* Hover effects for interactive elements */
+a, .cta-button {
+    color: #b5651d;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover, .cta-button:hover {
+    color: #7c4c1e; /* Darker brown on hover */
+    border-bottom: 2px solid #b5651d; /* Subtle underline effect */
+}
+
+/* Elegant hover animations for section headers */
+section h2.text-center:hover,
+section h3.text-center:hover {
+    color: #5b3d1a; /* Slightly darker brown on hover */
+    transform: scale(1.02); /* Slight zoom on hover */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Safari-like background for section areas */
+section {
+    background-color: #f4e9db; /* Soft cream background for sections */
+    padding: 50px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-bottom: 2px solid #b5651d; /* Safari brown border at the bottom */
+}
+
+/* Buttons with a safari theme */
+.cta-button {
+    display: inline-block;
+    background-color: #b5651d; /* Safari brown background */
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #7c4c1e; /* Darker brown on hover */
+    color: #fff;
+}
+
+/* General layout fixes */
+section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Adding a texture for more safari feel */
+body {
+    background-image: url('../images/safari-texture.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}

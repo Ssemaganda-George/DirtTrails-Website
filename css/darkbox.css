@@ -1,0 +1,145 @@
+/*
+Darkbox Styles
+*/
+
+/* Make clickable darkbox items more interactive */
+[data-darkbox] {
+    cursor: pointer;
+    backface-visibility: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+[data-darkbox]:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Darkbox overlay with smooth fade-in effect */
+#darkbox {
+    position: fixed;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.9) no-repeat center center;
+    background-size: contain;
+    box-shadow: 0 0 0 3000px rgba(0, 0, 0, 0.8);
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth fade-in */
+}
+
+#darkbox.on { 
+    opacity: 1;
+    visibility: visible;
+    height: 90% !important;
+    width: 90% !important;
+    left: 5% !important;
+    top: 5% !important;
+}
+
+/* Close button with a more elegant icon */
+#darkbox:after {
+    position: absolute;
+    right: 10px; 
+    top: 10px;
+    font-size: 2.5em;
+    content: "\2715"; /* Unicode for 'X' symbol */
+    color: #f0f0f0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#darkbox:after:hover {
+    color: #ff6b6b; /* Subtle color change on hover */
+}
+
+/* Prev/Next buttons with modern arrow styles */
+#darkbox_prev,
+#darkbox_next {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    height: 50px;
+    width: 50px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 50%;
+}
+
+#darkbox_prev:hover,
+#darkbox_next:hover {
+    background-color: rgba(9, 204, 255, 0.5); /* Hover effect with a soft blue background */
+    border-color: #09c;
+}
+
+/* Arrow rotation for next/prev buttons */
+#darkbox_prev {
+    left: -10px;
+    -o-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+#darkbox_next {
+    right: -10px;
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Description text styling */
+#darkbox-description {
+    position: absolute;
+    width: 100%;
+    color: #f0f0f0;
+    bottom: 10px;
+    text-align: right;
+    padding: 0 20px;
+    font-size: 1.1em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s ease;
+    opacity: 0.8; /* Slight transparency for elegance */
+}
+
+/* Links within the description */
+#darkbox-description a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+#darkbox-description a:hover {
+    color: #09c;
+    border-bottom: 1px solid #09c;
+}
+
+/* Subscript styling for any additional small details */
+#darkbox sub {
+    font-size: 10px;
+    color: #ccc; /* Lighter color for less important info */
+}
+
+/* Adding slight fade-in animation to the darkbox */
+@keyframes darkbox-fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#darkbox.on {
+    animation: darkbox-fade-in 0.5s ease-out;
+}
